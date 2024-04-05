@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --clr-primary-l: hsl(14, 45%, 36%);
+    --clr-primary-d: hsl(332, 51%, 32%);
+
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-rose-white: hsl(330, 100%, 98%);
+    --clr-light-grey: hsl(30, 18%, 87%);
+    --clr-wenge-brown: hsl(30, 10%, 34%);
+    --clr-dark-charcoal: hsl(24, 5%, 18%);
+    --clr-main-bg: #f3e5d8;
+
+    --b-radius: 1rem;
+
+    --ff-primary: 'Outfit', sans-serif;
+    --ff-title: 'Young Serif', serif;
+
+
+}
+
+html {
+    font-size: 62.5%;
+    font-family: var(--ff-primary);
+}
+
+body {
+    font-size: 1.6rem;
+    background: var(--clr-main-bg);
+}
+
+main {
+    width: 100%;
+    color: var(--clr-wenge-brown);
+}
+
+.recipe_section_list li::marker {
+    color: var(--clr-primary-l);
+    font-weight: bold;
+    font-family: "Poppins";
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+/* utility classes */
+.bold {
+    font-weight: 800;
+    font-size: 1.66rem;
+}
+
+.recipe_title {
+    color: var(--clr-dark-charcoal);
+    font-family: var(--ff-title);
+    font-weight: 400;
+    font-size: 3.6rem;
+    line-height: 1.1;
+}
+
+.recipe_section_title {
+    color: var(--clr-primary-l);
+    font-size: 2.6rem;
+    font-family: var(--ff-title);
+}
+
+.prep_time_title {
+    color: var(--clr-primary-d);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.border-bottom {
+    border-bottom: 1px solid var(--clr-light-grey);
+}
+
+/* RECIPE */
+.recipe {
+    background-color: var(--clr-white);
+    max-width: 70rem;
+}
+
+.recipe_img_wrapper {
+    width: 100%;
+}
+
+.recipe_img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.content_container {
+    padding-inline: 3.2rem;
+    padding-block: 4.2rem;
+}
+
+.recipe_intro-text {
+    padding-block: 2.4rem;
+    line-height: 1.6;
+}
+
+.recipe_prep_time {
+    background-color: var(--clr-rose-white);
+    padding-inline: 2.4rem;
+    padding-block: 2.6rem;
+    margin-bottom: 2rem;
+    border-radius: var(--b-radius);
+}
+
+.prep_time_list {
+    padding-left: 2rem;
+}
+
+.prep_time_list li:not(:last-child) {
+    padding-block: .75rem;
+}
+
+.prep_time_list li:last-child {
+    padding-top: .75rem;
+}
+
+.prep_time_list .bold {
+    padding-right: 1rem;
+}
+
+.recipe_section_wrapper {
+    padding-block: 2rem;
+    /* border: 1px solid green; */
+}
+
+.recipe_section_list {
+    padding-left: 1.35rem;
+    margin-top: 1.6rem;
+    /* border: 1px solid pink; */
+}
+
+.recipe_section_list li {
+    padding-block: .75rem;
+    padding-left: 1.2rem;
+}
+
+.instruction-list p {
+    display: inline;
+    line-height: 1.6;
+}
+
+.recipe_section_subtext {
+    margin-top: 1.6rem;
+}
+
+/* NUTRITION LIST */
+.nutrition-list {
+    list-style-type: none;
+}
+
+.flex {
+    display: flex;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    padding-block: 1.1rem;
+    border-bottom: 1px solid var(--clr-light-grey);
+}
+
+.flex:last-child {
+    border-bottom: none;
+}
+
+.list_name,
+.list_value {
+    flex: 1 0 50%;
+}
+
+.list_value {
+    font-weight: 800;
+    color: var(--clr-primary-l);
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 700px) {
+    main {
+        display: grid;
+        place-items: center;
+        place-content: center;
+        margin-top: 15rem;
+    }
+
+    .recipe {
+        border-radius: calc(2.5 * var(--b-radius));
+    }
+
+    .recipe_img_wrapper {
+        padding: 4rem;
+        padding-bottom: 0;
+    }
+
+    .recipe_img  {
+        border-radius: calc(1.25 * var(--b-radius));
+    }
+
+    .recipe_title {
+        font-size: 3.8rem;
+    }
+
+    .content_container {
+        padding-bottom: 1rem;
+    }
+}
+
+
+@media screen and (min-width: 800px) {
+    .recipe_prep_time {
+        padding-inline: 4.2rem;
+        padding-block: 3,2rem;
+        margin-bottom: 2rem;
+    }
+
+    .prep_time_list li {
+        padding-left: 1.2rem;
+    }
+}
+
